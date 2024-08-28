@@ -1,0 +1,134 @@
+
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #d2fabc, #0e9236);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-top: 50px;
+    max-width: 800px;
+  }
+  
+  .h1 {
+    color: darkgreen;
+    margin-top: 20px;
+  }
+  
+  .p {
+    text-align: center;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #47be3a;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+  }
+  
+  .post-form, .posts {
+    margin-top: 20px;
+  }
+  
+  .post-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .post-form div {
+    margin-bottom: 15px;
+  }
+  
+  .post-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .post-form input[type="text"],
+  .post-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .post-form input[type="text"]:focus,
+  .post-form textarea:focus {
+    border-color: #af4261;
+  }
+  
+  .post-form button {
+    background: #66af42;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .post-form button:hover {
+    background: #f3ec78;
+    color: #333;
+  }
+  
+  .posts .post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .posts .post h3 {
+    margin-top: 0;
+    color: #af4261;
+  }
+  
+  .posts .post p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  .posts .post a, .posts .post form button {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #66af42;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: color 0.3s ease;
+  }
+  
+  .posts .post a:hover, .posts .post form button:hover {
+    color: #f3ec78;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+    }
+  }
+  
