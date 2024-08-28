@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post App</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <h1 class="h1">Publish your passions, your way</h1>
+    <p class="p">Create a unique and beautiful blog easily.</p>
+  <div class="container">
+    <h1>Create a Post</h1>
+    <div class="post-form">
+      <form action="/create-post" method="POST">
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required>
+        </div>
+        <div>
+          <label for="content">Content:</label>
+          <textarea id="content" name="content" rows="4" required></textarea>
+        </div>
+        <button type="submit">Create Post</button>
+      </form>
+    </div>
+    <div class="posts">
+      <h2>Posts</h2>
+      <% if (posts.length === 0) { %>
+        <p>No posts yet. Be the first to create a post!</p>
+      <% } else { %>
+        <% posts.forEach(post => { %>
+          <div class="post">
+            <h3><%= post.title %></h3>
+            <p><%= post.content %></p>
+            <a href="/edit-post/<%= post.id %>">Edit</a>
+            <form action="/delete-post/<%= post.id %>" method="POST" style="display:inline;">
+              <button type="submit">Delete</button>
+            </form>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
